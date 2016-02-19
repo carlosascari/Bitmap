@@ -1,10 +1,8 @@
 # Bitmap
 
-This is a converter, any image that is supported by your browser will be converted to a [https://en.wikipedia.org/wiki/BMP_file_format](24bit BITMAPINFOHEADER) Bitmap image. 
+This is a converter, any image that is supported by your browser will be converted to a [24bit BITMAPINFOHEADER](https://en.wikipedia.org/wiki/BMP_file_format) Bitmap image. 
 
-
-
-The issue here is that all images that the canvas [https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL](toDataURL) method accepts, will save your image after altering the original pixels you set. I'll elaborate: 
+The issue here is that all images that the canvas [toDataURL](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL) method accepts, will save your image after altering the original pixels you set. I'll elaborate: 
 
 If at the center of an image you set two pixels a fixed value, when you convert it to a Data Url, and set the `src` attribute of Image Element, the Image you have if you re-read it through the canvas, or download it and read it from some external program, those pixels will usually have different a value.
 
